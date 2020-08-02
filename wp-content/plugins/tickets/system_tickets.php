@@ -42,7 +42,8 @@ function post_type() {
     $args = array(
         'labels'             => $labels,
         'public'             => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
+        'exclude_from_search'=> false,
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
@@ -50,12 +51,12 @@ function post_type() {
         'capability_type'    => 'post',
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-feedback',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'supports'           => array( 'title', 'editor'),
     );
 
-    register_post_type( 'Tickets', $args );
+    register_post_type( 'tickets', $args );
 }
 
 add_action( 'init', 'post_type' );
