@@ -1,5 +1,5 @@
 <?php
-function post_type() {
+function ticket_post_type() {
     $labels = array(
         'name'                  => _x( 'Ticket', 'Post type general name', 'ticket' ),
         'singular_name'         => _x( 'Ticket', 'Post type singular name', 'ticket' ),
@@ -48,5 +48,11 @@ function post_type() {
 }
 
 add_action( 'init', 'post_type' );
+
+// refrescar el htaccess para que reconozca la ruta de tickets
+function ticket_rewrite_flush(){
+  ticket_post_type();
+  flush_rewrite_rules();
+}
 
 ?>
