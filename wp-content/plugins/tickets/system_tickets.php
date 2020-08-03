@@ -13,10 +13,12 @@ Domain Path: /languages
 */
 
 // Llamando al archivo posttype.php
-require_once plugin_dir_path(__FILE__) . 'includes/posttypes.php'
+require_once plugin_dir_path(__FILE__) . 'includes/posttypes.php';
 
 // Llamado a la regeneracion de htaccess
-register_activation_hook(__FILE__) . 'ticket_rewrite_flush';
+register_activation_hook(__FILE__, 'ticket_rewrite_flush');
 
+// Agregando metaboxes llamando all archivo metaboxes.php
+require_once plugin_dir_path(__FILE__) . 'includes/metaboxes.php';
 
 ?>

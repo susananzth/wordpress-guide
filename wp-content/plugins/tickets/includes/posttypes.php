@@ -1,4 +1,5 @@
 <?php
+if(! defined('ABSPATH')) exit;
 function ticket_post_type() {
     $labels = array(
         'name'                  => _x( 'Ticket', 'Post type general name', 'ticket' ),
@@ -47,12 +48,11 @@ function ticket_post_type() {
     register_post_type( 'tickets', $args );
 }
 
-add_action( 'init', 'post_type' );
+add_action( 'init', 'ticket_post_type' );
 
 // refrescar el htaccess para que reconozca la ruta de tickets
 function ticket_rewrite_flush(){
   ticket_post_type();
   flush_rewrite_rules();
 }
-
 ?>
