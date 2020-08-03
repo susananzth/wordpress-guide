@@ -21,4 +21,16 @@ register_activation_hook(__FILE__, 'ticket_rewrite_flush');
 // Agregando metaboxes llamando all archivo metaboxes.php
 require_once plugin_dir_path(__FILE__) . 'includes/metaboxes.php';
 
+// Agregando roles y capabilities
+require_once plugin_dir_path(__FILE__) . 'includes/roles.php';
+// Se crea el rol al activar el plugin
+register_activation_hook(__FILE__, 'ticket_create_role');
+// Se elimina el rol al desactivar el plugin
+register_deactivation_hook(__FILE__, 'ticket_remove_role');
+/*
+// Se crean los capabilities al activar el plugin
+register_activation_hook(__FILE__, 'ticket_add_capabilities');
+// Se eliminan los capabilities al desactivar el plugin
+register_deactivation_hook(__FILE__, 'ticket_remove_capabilities'); */
+
 ?>

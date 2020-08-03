@@ -37,12 +37,13 @@ function ticket_post_type() {
         'show_in_menu'       => true,
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'tickets' ),
-        'capability_type'    => 'post',
+        'capability_type'    => array( 'ticket', 'tickets'),
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-feedback',
         'has_archive'        => false,
         'hierarchical'       => false,
         'supports'           => array( 'title', 'editor'),
+        'map_meta_cap'       => true,
     );
 
     register_post_type( 'tickets', $args );
