@@ -17,7 +17,8 @@ template name: Ancho completo - Inicio
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+		<script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
         <?php wp_head(); ?>
     <!-- Aquí llamo los script para cargar y ejecutar todas las funciones de cabecera. |
          I call the script to load and execute all the header functions.-->
@@ -32,7 +33,7 @@ template name: Ancho completo - Inicio
 				<div class="container">
 						<a class="navbar-brand text-white" href="#">
 						</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto mr-lg-5">
 								<?php wp_nav_menu( array(
