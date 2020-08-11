@@ -6392,6 +6392,10 @@ input[type=button].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  background: url(img/logo.png) no-repeat center center;
+  width: 151px;
+  height: 50px;
+  background-size: contain;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -19723,6 +19727,9 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.navbar-marketing.bg-transparent.navbar-light {
+  background-color: #eee !important;
+}
 .navbar-marketing .navbar-nav .nav-item .nav-link {
   font-weight: 500;
 }
@@ -19769,7 +19776,7 @@ body {
   }
 
   .navbar-marketing.bg-transparent.navbar-light {
-    background-color: #eff3f9 !important;
+    background-color: #eee !important;
   }
 
   .animated--fade-in,

@@ -28,10 +28,9 @@ template name: Ancho completo - Inicio
 <body id="body" <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="global-container">
-		<nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-dark fixed-top">
+		<nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-light fixed-top">
 				<div class="container">
 						<a class="navbar-brand text-white" href="#">
-							<img src="/img/0cb16f92.png" alt="Dev Solutions" title="Dev Solutions" class="logo">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
