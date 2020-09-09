@@ -2,8 +2,8 @@
 
 
 use ColibriWP\Theme\Core\Hooks;
-use ColibriWP\Theme\View;
 use ColibriWP\Theme\Translations;
+use ColibriWP\Theme\View;
 
 $colibriwp_tabs            = View::getData( 'tabs', array() );
 $colibriwp_current_tab     = View::getData( 'current_tab', null );
@@ -15,7 +15,7 @@ $colibri_slug = get_template() . "-page-info";
 $colibri_get_started = array(
 	'plugin_installed_and_active' => Translations::escHtml( 'plugin_installed_and_active' ),
 	'activate' => Translations::escHtml( 'activate' ),
-	'activating' => __('Activating'),
+    'activating'                  => __( 'Activating', 'colibri-wp' ),
 	'install_recommended' => isset($_GET['install_recommended']) ? $_GET['install_recommended'] :''
 );
 
